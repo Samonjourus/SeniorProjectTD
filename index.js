@@ -33,6 +33,7 @@ var ChargingStation6={
 }
 
 server.get("/", function(req,res){
+  res.set("Content-Type", "application/json")
   res.end(JSON.stringify({"CurrentPower":currentPower,
                           "ChargingStation1":ChargingStation1,
                           "ChargingStation2":ChargingStation2,
