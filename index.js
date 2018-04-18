@@ -9,27 +9,27 @@ server.use(BODYPARSER.urlencoded({extended:true}))
 
 var ChargingStation1={
   PowerDraw:0,
-  inuse:false
+  InUse:false
 }
 var ChargingStation2={
   PowerDraw:0,
-  inuse:false
+  InUse:false
 }
 var ChargingStation3={
   PowerDraw:0,
-  inuse:false
+  InUse:false
 }
 var ChargingStation4={
   PowerDraw:0,
-  inuse:false
+  InUse:false
 }
 var ChargingStation5={
   PowerDraw:0,
-  inuse:false
+  InUse:false
 }
 var ChargingStation6={
   PowerDraw:0,
-  inuse:false
+  InUse:false
 }
 
 server.get("/", function(req,res){
@@ -51,7 +51,7 @@ server.post("/", function(req,res){
     else
       currentPower = currentPower + ChargingStation1.PowerDraw;
     ChargingStation1.PowerDraw=req.body.PowerDraw;
-    ChargingStation1.inuse=req.body.inuse;
+    ChargingStation1.InUse=req.body.InUse;
   }
   if(req.body.StationID==2){
     if(req.body.PowerDraw > 0)
@@ -59,7 +59,7 @@ server.post("/", function(req,res){
     else
       currentPower = currentPower + ChargingStation2.PowerDraw;
     ChargingStation2.PowerDraw=req.body.PowerDraw;
-    ChargingStation2.inuse=req.body.inuse;
+    ChargingStation2.InUse=req.body.InUse;
   }
   if(req.body.StationID==3){
     if(req.body.PowerDraw > 0)
@@ -67,7 +67,7 @@ server.post("/", function(req,res){
     else
       currentPower = currentPower + ChargingStation3.PowerDraw;
     ChargingStation3.PowerDraw=req.body.PowerDraw;
-    ChargingStation3.inuse=req.body.inuse;
+    ChargingStation3.InUse=req.body.InUse;
   }
   if(req.body.StationID==4){
     if(req.body.PowerDraw > 0)
@@ -75,7 +75,7 @@ server.post("/", function(req,res){
     else
       currentPower = currentPower + ChargingStation4.PowerDraw;
     ChargingStation4.PowerDraw=req.body.PowerDraw;
-    ChargingStation4.inuse=req.body.inuse;
+    ChargingStation4.InUse=req.body.InUse;
   }
   if(req.body.StationID==5){
     if(req.body.PowerDraw > 0)
@@ -83,7 +83,7 @@ server.post("/", function(req,res){
     else
       currentPower = currentPower + ChargingStation5.PowerDraw;
     ChargingStation5.PowerDraw=req.body.PowerDraw;
-    ChargingStation5.inuse=req.body.inuse;
+    ChargingStation5.InUse=req.body.InUse;
   }
   if(req.body.StationID==6){
     if(req.body.PowerDraw > 0)
@@ -91,7 +91,7 @@ server.post("/", function(req,res){
     else
       currentPower = currentPower + ChargingStation6.PowerDraw;
     ChargingStation6.PowerDraw=req.body.PowerDraw;
-    ChargingStation6.inuse=req.body.inuse;
+    ChargingStation6.InUse=req.body.InUse;
   }
 
   res.end(JSON.stringify({}))
